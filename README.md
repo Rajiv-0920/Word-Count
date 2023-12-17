@@ -4,3 +4,9 @@
 
 ### Key Concept Cover
 
+1. getElementById()
+2. addEventListener()
+3. Function
+4. RegEx
+5. match()
+6. innerText
