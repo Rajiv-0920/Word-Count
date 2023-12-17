@@ -24,7 +24,7 @@ function charactersWithoutSpace(input) {
 }
 
 function countSentence(input) {
-    let regex = /[A-Z](?!\.)(.|\n)+?[.?!]/g;
+    let regex = /[A-Z](.|\n)+?[.?!]/g;
     if (input.match(regex) != null) {
         return input.match(regex).length;
     }
@@ -32,8 +32,8 @@ function countSentence(input) {
 }
 
 function countParagraph(input) {
-    let regex = /[A-Z](.+|\n)[.?!]/g;
-    if (input.match(regex) != null) {
+    let regex = /[A-Z](.|\n)+?[.?!](\n|$)/g;
+    if (input.trim().match(regex) != null) {
         return input.match(regex).length;
     }
     return 0;
